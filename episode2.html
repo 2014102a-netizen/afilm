@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Эпизод 2 - AFilm</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="header-container">
+      <a href="index.html" class="logo">AFilm</a>
+      <nav class="main-nav">
+        <a href="index.html">Главная</a>
+        <a href="cameras.html">Справочник камер</a>
+        <a href="vision.html">Расследование</a>
+        <a href="index.html#about">О проекте</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="episode-container">
+    <div class="episode-header">
+      <h1>🎬 Эпизод 2: След ведёт дальше</h1>
+      <p class="episode-subtitle">Анализируйте новые улики</p>
+    </div>
+
+    <div class="episode-content">
+      <div class="story-section">
+        <h2>📖 История</h2>
+        <p>Вы успешно определили первую камеру! Расследование продолжается. На съёмочной площадке обнаружены новые записи. Одна из них может содержать ключевую информацию о том, что произошло с Олегом.</p>
+        <p>Используйте свои знания о визуальных характеристиках камер, чтобы определить правильную запись.</p>
+        <a href="cameras.html" class="btn-cameras" target="_blank">📷 Открыть справочник камер</a>
+      </div>
+
+      <div class="video-section">
+        <h2>🎥 Видеозаписи</h2>
+
+        <div class="video-grid">
+          <div class="video-card">
+            <h3>Запись A</h3>
+            <div class="video-container">
+              <iframe src="https://drive.google.com/file/d/VIDEO_ID_A/preview" width="100%" height="300" allow="autoplay"></iframe>
+            </div>
+          </div>
+
+          <div class="video-card">
+            <h3>Запись B</h3>
+            <div class="video-container">
+              <iframe src="https://drive.google.com/file/d/VIDEO_ID_B/preview" width="100%" height="300" allow="autoplay"></iframe>
+            </div>
+          </div>
+
+          <div class="video-card">
+            <h3>Запись C</h3>
+            <div class="video-container">
+              <iframe src="https://drive.google.com/file/d/VIDEO_ID_C/preview" width="100%" height="300" allow="autoplay"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-section">
+        <h2>❓ Вопрос</h2>
+        <p class="question-text">Какая запись была сделана на камеру Canon XL1?</p>
+
+        <div class="answers" id="answers">
+          <button class="answer-btn" data-answer="A" onclick="checkAnswer('A', 2)">Запись A</button>
+          <button class="answer-btn" data-answer="B" onclick="checkAnswer('B', 2)">Запись B</button>
+          <button class="answer-btn" data-answer="C" onclick="checkAnswer('C', 2)">Запись C</button>
+        </div>
+
+        <div class="feedback" id="feedback"></div>
+      </div>
+
+      <div class="navigation">
+        <a href="episode1.html" class="btn-nav">← Предыдущий эпизод</a>
+        <a href="cameras.html" class="btn-nav">📷 Справочник камер</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

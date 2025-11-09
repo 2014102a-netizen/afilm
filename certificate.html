@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сертификат - AFilm</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="header-container">
+      <a href="index.html" class="logo">AFilm</a>
+      <nav class="main-nav">
+        <a href="index.html">Главная</a>
+        <a href="cameras.html">Справочник камер</a>
+        <a href="vision.html">Расследование</a>
+        <a href="index.html#about">О проекте</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="certificate-container">
+    <div class="certificate">
+      <div class="certificate-border">
+        <div class="certificate-content">
+          <h1 class="certificate-title">🏆 Сертификат детектива</h1>
+
+          <div class="certificate-badge">
+            <div class="badge-icon">🎥</div>
+          </div>
+
+          <h2 class="certificate-subtitle">Награждается</h2>
+
+          <div class="certificate-name-wrapper">
+            <p id="certificate-name" class="certificate-name">Имя детектива</p>
+          </div>
+
+          <div class="certificate-text">
+            <p>За успешное завершение расследования исчезновения режиссёра Олега</p>
+            <p>и демонстрацию отличных знаний визуальных характеристик видеокамер</p>
+          </div>
+
+          <div class="certificate-achievement">
+            <p><strong>Пройдено эпизодов:</strong> <span id="episodes-completed">4</span> из 4</p>
+            <p><strong>Правильных ответов:</strong> <span id="correct-answers">4</span> из 4</p>
+            <p><strong>Процент успеха:</strong> <span id="success-rate">100%</span></p>
+          </div>
+
+          <div class="certificate-skills">
+            <h3>Освоенные навыки:</h3>
+            <ul>
+              <li>✓ Анализ визуальных характеристик видео</li>
+              <li>✓ Определение камер по цветопередаче</li>
+              <li>✓ Понимание технических параметров видеокамер</li>
+              <li>✓ Критическое мышление и внимание к деталям</li>
+            </ul>
+          </div>
+
+          <div class="certificate-footer">
+            <div class="certificate-date">
+              <p>Дата выдачи:</p>
+              <p id="certificate-date"></p>
+            </div>
+            <div class="certificate-signature">
+              <p>_____________________</p>
+              <p>AFilm Detective Academy</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="certificate-actions">
+      <button class="btn-download" onclick="window.print()">📥 Скачать сертификат</button>
+      <a href="index.html" class="btn-home">← Вернуться на главную</a>
+      <a href="episode1.html" class="btn-replay">🔄 Пройти заново</a>
+    </div>
+  </div>
+
+  <script>
+    // Заполняем дату выдачи сертификата
+    const dateElement = document.getElementById('certificate-date');
+    const today = new Date();
+    const formattedDate = today.toLocaleDateString('ru-RU', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+    dateElement.textContent = formattedDate;
+
+    // Получаем имя из localStorage или используем дефолтное
+    const userName = localStorage.getItem('userName') || 'Детектив';
+    document.getElementById('certificate-name').textContent = userName;
+
+    // Получаем статистику из localStorage
+    const episodesCompleted = localStorage.getItem('episodesCompleted') || 4;
+    const correctAnswers = localStorage.getItem('correctAnswers') || 4;
+    const successRate = Math.round((correctAnswers / 4) * 100);
+
+    document.getElementById('episodes-completed').textContent = episodesCompleted;
+    document.getElementById('correct-answers').textContent = correctAnswers;
+    document.getElementById('success-rate').textContent = successRate + '%';
+  </script>
+</body>
+</html>

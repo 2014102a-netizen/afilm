@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AFilm - Vision Document</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="header-container">
+      <a href="index.html" class="logo">AFilm</a>
+      <nav class="main-nav">
+        <a href="index.html">Главная</a>
+        <a href="cameras.html">Справочник камер</a>
+        <a href="vision.html">Расследование</a>
+        <a href="index.html#about">О проекте</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="vision-container">
+    <div class="vision-screen active" data-screen="1">
+      <h1>🎬 Добро пожаловать в AFilm</h1>
+      <p>Интерактивная детективная игра о языке камер</p>
+      <button class="btn-next" onclick="nextScreen()">Начать →</button>
+    </div>
+
+    <div class="vision-screen" data-screen="2">
+      <h2>📖 История</h2>
+      <p>Режиссёр Олег исчез при загадочных обстоятельствах. Детектив находит несколько записей с места происшествия, снятых на разные камеры.</p>
+      <p>Ваша задача: определить, какая камера запечатлела настоящие события, изучая визуальные характеристики записей.</p>
+      <button class="btn-next" onclick="nextScreen()">Далее →</button>
+    </div>
+
+    <div class="vision-screen" data-screen="3">
+      <h2>🎯 Цель игры</h2>
+      <p>Пройти 4 эпизода расследования</p>
+      <p>Научиться различать камеры по визуальным характеристикам</p>
+      <p>Раскрыть тайну исчезновения режиссёра</p>
+      <button class="btn-next" onclick="nextScreen()">Далее →</button>
+    </div>
+
+    <div class="vision-screen" data-screen="4">
+      <h2>📷 Справочник камер</h2>
+      <p>Перед началом изучите базу камер, чтобы понимать их визуальные отличия</p>
+      <a href="cameras.html" class="btn-cameras">Открыть справочник →</a>
+      <button class="btn-next" onclick="nextScreen()">Начать расследование →</button>
+    </div>
+  </div>
+
+  <script>
+    let currentScreen = 1;
+    const totalScreens = 4;
+
+    function nextScreen() {
+      if (currentScreen === totalScreens) {
+        window.location.href = 'episode1.html';
+        return;
+      }
+
+      document.querySelector(`[data-screen="${currentScreen}"]`).classList.remove('active');
+      currentScreen++;
+      document.querySelector(`[data-screen="${currentScreen}"]`).classList.add('active');
+    }
+  </script>
+</body>
+</html>
