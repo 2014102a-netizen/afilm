@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -149,11 +153,16 @@ body {
 
 /* === О ПРОЕКТЕ === */
 .about-section {
-  max-width: 900px;
-  margin: 80px auto;
-  padding: 60px 40px;
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 12px;
+  padding: 60px 20px;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.about-section h1 {
+  color: #ff8c42;
+  font-size: 42px;
+  margin-bottom: 30px;
+  text-align: center;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
 }
 
 .about-section h2 {
@@ -164,10 +173,11 @@ body {
 }
 
 .about-section h3 {
-  color: #ff8c42;
-  font-size: 28px;
-  margin-top: 40px;
-  margin-bottom: 20px;
+  color: #ff9933;
+  font-size: 20px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
 
 .about-section p {
@@ -175,6 +185,32 @@ body {
   line-height: 1.8;
   font-size: 18px;
   margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.behind-scenes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.thanks-text {
+  max-width: 800px;
+  margin: 30px auto;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: center;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+  color: #ffffff;
+}
+
+.project-info {
+  text-align: center;
+  font-style: italic;
+  color: #ff9933;
+  margin-top: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
 
 .cameras-promo {
@@ -228,10 +264,18 @@ body {
 }
 
 .photo-card {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
   padding: 30px;
   text-align: center;
+  border: 2px solid rgba(255, 153, 51, 0.3);
+  transition: all 0.3s;
+}
+
+.photo-card:hover {
+  border-color: #ff9933;
+  background: rgba(255, 153, 51, 0.15);
+  transform: translateY(-5px);
 }
 
 .photo-placeholder {
@@ -250,8 +294,9 @@ body {
 }
 
 .photo-description {
-  color: #888;
+  color: #ddd;
   font-size: 16px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 /* === КОМАНДА === */
@@ -1338,7 +1383,8 @@ h1, h2, h3 {
     height: 250px;
   }
 
-  .team-photos {
+  .team-photos,
+  .behind-scenes-grid {
     grid-template-columns: 1fr;
   }
 
