@@ -1462,3 +1462,69 @@ h1, h2, h3 {
     padding: 0;
   }
 }
+
+/* === ДОПОЛНИТЕЛЬНЫЕ СТИЛИ ДЛЯ ФИКСИРОВАННОЙ ШАПКИ === */
+/* Fixed Header */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 1000;
+  padding: 15px 0;
+  border-bottom: 2px solid #ff9933;
+}
+
+.nav-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff9933;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.nav-links a:hover {
+  color: #ff9933;
+}
+
+/* Улучшенная читаемость для about-section */
+.about-section h2 {
+  color: #ff9933;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.about-section p {
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.team-member-name {
+  color: #ff9933;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+.team-member-role {
+  color: #ffffff;
+  font-style: italic;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
