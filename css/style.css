@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -149,11 +153,16 @@ body {
 
 /* === О ПРОЕКТЕ === */
 .about-section {
-  max-width: 900px;
-  margin: 80px auto;
-  padding: 60px 40px;
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 12px;
+  padding: 60px 20px;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.about-section h1 {
+  color: #ff8c42;
+  font-size: 42px;
+  margin-bottom: 30px;
+  text-align: center;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
 }
 
 .about-section h2 {
@@ -164,10 +173,11 @@ body {
 }
 
 .about-section h3 {
-  color: #ff8c42;
-  font-size: 28px;
-  margin-top: 40px;
-  margin-bottom: 20px;
+  color: #ff9933;
+  font-size: 20px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
 
 .about-section p {
@@ -175,6 +185,32 @@ body {
   line-height: 1.8;
   font-size: 18px;
   margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.behind-scenes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.thanks-text {
+  max-width: 800px;
+  margin: 30px auto;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: center;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+  color: #ffffff;
+}
+
+.project-info {
+  text-align: center;
+  font-style: italic;
+  color: #ff9933;
+  margin-top: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
 
 .cameras-promo {
@@ -228,10 +264,18 @@ body {
 }
 
 .photo-card {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
   padding: 30px;
   text-align: center;
+  border: 2px solid rgba(255, 153, 51, 0.3);
+  transition: all 0.3s;
+}
+
+.photo-card:hover {
+  border-color: #ff9933;
+  background: rgba(255, 153, 51, 0.15);
+  transform: translateY(-5px);
 }
 
 .photo-placeholder {
@@ -250,8 +294,9 @@ body {
 }
 
 .photo-description {
-  color: #888;
+  color: #ddd;
   font-size: 16px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 /* === КОМАНДА === */
@@ -1115,6 +1160,219 @@ h1, h2, h3 {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
+/* === 1. ГЛОБАЛЬНОЕ ЗАТЕМНЕНИЕ ДЛЯ БЕЛОГО ТЕКСТА === */
+/* Все секции с белым текстом получают затемненный overlay */
+.welcome-section,
+.story-section,
+.how-to-play-section,
+.characters-section,
+.team-section,
+.behind-scenes-section {
+  position: relative;
+}
+
+.welcome-section::before,
+.story-section::before,
+.how-to-play-section::before,
+.characters-section::before,
+.team-section::before,
+.behind-scenes-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 0;
+}
+
+.welcome-section .container,
+.story-section .container,
+.how-to-play-section .container,
+.characters-section .container,
+.team-section .container,
+.behind-scenes-section .container,
+.behind-scenes h2,
+.behind-scenes .team-photos {
+  position: relative;
+  z-index: 1;
+}
+
+/* Белый текст получает тень */
+.welcome-section p,
+.story-section p,
+.how-to-play-section p,
+.characters-section p,
+.team-section p,
+.behind-scenes-section p,
+.welcome-text,
+.story-intro,
+.story-task,
+.story-hint {
+  color: #ffffff;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+}
+
+/* === 2. ОРАНЖЕВЫЕ РАМКИ ПРИ НАВЕДЕНИИ === */
+
+/* Камеры в справочнике */
+.camera-card {
+  border: 2px solid rgba(255, 153, 51, 0.3);
+  transition: all 0.3s;
+}
+
+.camera-card:hover {
+  border-color: #ff9933;
+  background: rgba(255, 153, 51, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(255, 153, 51, 0.4);
+}
+
+/* Видео-карточки с вариантами */
+.video-option,
+.answer-option {
+  border: 2px solid rgba(255, 153, 51, 0.3);
+  transition: all 0.3s;
+  border-radius: 10px;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.video-option:hover,
+.answer-option:hover {
+  border-color: #ff9933;
+  background: rgba(255, 153, 51, 0.15);
+  transform: scale(1.02);
+}
+
+/* Карточки команды */
+.team-member {
+  border: 2px solid rgba(255, 153, 51, 0.3);
+  transition: all 0.3s;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.team-member:hover {
+  border-color: #ff9933;
+  background: rgba(255, 153, 51, 0.15);
+}
+
+/* === 3. РАСШИРИТЬ ВИДЕО ВЕЗДЕ === */
+
+/* Главная страница - огромное видео */
+.hero-section .video-container {
+  max-width: 95vw;
+  width: 100%;
+  margin: 30px auto;
+}
+
+.hero-section .video-container iframe {
+  width: 100%;
+  height: 75vh;
+  max-height: 700px;
+  border-radius: 15px;
+}
+
+/* Эпизоды - три видео в ряд, крупнее */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.video-grid .video-option iframe,
+.video-grid .video-card iframe {
+  width: 100%;
+  height: 350px;
+  border-radius: 10px;
+}
+
+/* Два столбца для Episode 4 */
+.video-grid.two-columns {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+@media (max-width: 1200px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .video-grid .video-option iframe,
+  .video-grid .video-card iframe {
+    height: 400px;
+  }
+}
+
+/* === 4. ВОПРОС С ОРАНЖЕВЫМ ФОНОМ === */
+.question-section {
+  background: linear-gradient(135deg, rgba(255, 153, 51, 0.25), rgba(255, 153, 51, 0.15));
+  padding: 40px;
+  border-radius: 15px;
+  margin: 40px 0;
+  border: 3px solid #ff9933;
+}
+
+.question-section h2 {
+  color: #ff9933;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+/* === 5. КНОПКИ С ВАРИАНТАМИ ОТВЕТА === */
+.answer-options {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 30px 0;
+}
+
+.answer-button,
+.answer-btn {
+  background: transparent;
+  border: 3px solid rgba(255, 153, 51, 0.5);
+  color: #ffffff;
+  padding: 20px 50px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+.answer-button:hover,
+.answer-btn:hover {
+  background: #ff9933;
+  color: #000000;
+  border-color: #ff9933;
+  transform: scale(1.05);
+  text-shadow: none;
+}
+
+/* === 6. КОМАНДА - УЛУЧШИТЬ ЧИТАЕМОСТЬ === */
+.team-section {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 60px 20px;
+}
+
+.team-member h3 {
+  color: #ff9933;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+}
+
+.team-member .role {
+  color: #ff9933;
+  font-style: italic;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
 /* === МОБИЛЬНАЯ ВЕРСИЯ === */
 @media (max-width: 768px) {
   .hero-title {
@@ -1125,7 +1383,8 @@ h1, h2, h3 {
     height: 250px;
   }
 
-  .team-photos {
+  .team-photos,
+  .behind-scenes-grid {
     grid-template-columns: 1fr;
   }
 
