@@ -903,6 +903,43 @@ body {
   text-align: center;
 }
 
+.how-to-play-section {
+  padding: 60px 20px;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.how-to-play-section h1 {
+  color: #ff8c42;
+  font-size: 42px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.rules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.rule-card {
+  background: rgba(255, 153, 51, 0.1);
+  padding: 25px;
+  border-radius: 10px;
+  border: 2px solid #ff9933;
+  text-align: center;
+}
+
+.rule-card h3 {
+  color: #ff9933;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.rule-card p {
+  line-height: 1.6;
+}
+
 .story-section {
   padding: 60px 20px;
   background: rgba(0, 0, 0, 0.5);
