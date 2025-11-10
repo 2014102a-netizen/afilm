@@ -7,49 +7,57 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Fixed Navigation -->
-  <header class="site-header">
-    <nav class="main-nav">
-      <div class="nav-brand">AFilm</div>
-      <div class="nav-links">
-        <a href="#home">Главная</a>
-        <a href="cameras.html">Справочник камер</a>
-        <a href="#episodes">Расследование</a>
-        <a href="#about">О проекте</a>
-      </div>
-    </nav>
-  </header>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">AFilm</a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="cameras.html">Справочник камер</a></li>
+        <li><a href="episode1.html">Расследование</a></li>
+        <li><a href="#about">О проекте</a></li>
+      </ul>
+    </div>
+  </nav>
 
   <!-- Hero Section -->
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <h1 class="title">AFilm</h1>
-      <p class="subtitle">Детективная история о любительском кино</p>
-      <div class="video-container">
-        <iframe src="https://drive.google.com/file/d/1Y_cy5AmZoh_256iICF_g1Q8J92HI-7O4/preview" allow="autoplay"></iframe>
+  <section class="hero-section">
+    <div class="hero-container">
+      <h1 class="hero-title">AFilm</h1>
+      <p class="hero-subtitle">Детективная история о любительском кино</p>
+
+      <div class="hero-video-wrapper">
+        <iframe
+          src="https://drive.google.com/file/d/1Y_cy5AmZoh_256iICF_g1Q8J92HI-7O4/preview"
+          allow="autoplay"
+          class="hero-video">
+        </iframe>
       </div>
-      <button class="btn-start" onclick="location.href='episode1.html'">НАЧАТЬ РАССЛЕДОВАНИЕ</button>
+
+      <button class="hero-button" onclick="location.href='episode1.html'">
+        НАЧАТЬ РАССЛЕДОВАНИЕ
+      </button>
     </div>
   </section>
 
-  <!-- Как играть (НОВАЯ СЕКЦИЯ) -->
-  <section class="how-to-play" id="how-to-play">
+  <!-- Как играть -->
+  <section class="how-to-play-section" id="how-to-play">
     <div class="container">
-      <h2>🎮 Как играть</h2>
-      <div class="rules-grid">
-        <div class="rule-card">
+      <h2 class="section-title">🎮 Как играть</h2>
+      <div class="how-to-grid">
+        <div class="how-to-card">
           <h3>1. Смотрите записи</h3>
-          <p>В каждом эпизоде — 3 видеозаписи одной сцены с разных камер</p>
+          <p>В каждом эпизоде — 3 видеозаписи одной сцены, снятые разными камерами</p>
         </div>
-        <div class="rule-card">
+        <div class="how-to-card">
           <h3>2. Изучайте камеры</h3>
-          <p>Используйте справочник для изучения технических характеристик</p>
+          <p>Используйте справочник для изучения технических характеристик каждой модели</p>
         </div>
-        <div class="rule-card">
+        <div class="how-to-card">
           <h3>3. Выбирайте правду</h3>
           <p>Определите, какая камера запечатлела настоящие события</p>
         </div>
-        <div class="rule-card">
+        <div class="how-to-card">
           <h3>4. Собирайте улики</h3>
           <p>4 эпизода = 4 ключевые улики к разгадке</p>
         </div>
