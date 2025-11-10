@@ -281,10 +281,58 @@ body {
   margin-bottom: 50px;
 }
 
+/* За кадром - фотографии */
 .team-photos {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+.team-photo-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 2px solid #ff9933;
+  transition: transform 0.3s;
+}
+
+.team-photo-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 30px rgba(255, 153, 51, 0.4);
+}
+
+.team-photo-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.team-photo-caption {
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.team-photo-title {
+  color: #ff9933;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.team-photo-subtitle {
+  color: #ffffff;
+  font-size: 1rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 768px) {
+  .team-photos {
+    grid-template-columns: 1fr;
+  }
 }
 
 .photo-card {
@@ -369,6 +417,21 @@ body {
 }
 
 /* === ФУТЕР === */
+footer {
+  background: rgba(0, 0, 0, 0.95);
+  padding: 30px 20px;
+  text-align: center;
+  border-top: 2px solid #ff9933;
+  margin-top: 60px;
+}
+
+footer p {
+  color: #ffffff;
+  margin: 0;
+  font-size: 1rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
 .footer-section {
   background: rgba(255, 255, 255, 0.02);
   padding: 60px 20px;
