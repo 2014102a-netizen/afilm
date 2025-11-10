@@ -101,8 +101,21 @@ body {
 
 .video-container iframe {
   width: 100%;
-  height: 450px;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
   border: none;
+}
+
+/* Для главной страницы - большое видео */
+.hero-section .video-container {
+  max-width: 90vw;
+  width: 100%;
+  margin: 30px auto;
+}
+
+.hero-section .video-container iframe {
+  height: 70vh;
+  max-height: 600px;
 }
 
 .video-subtitle {
@@ -445,8 +458,20 @@ body {
 .video-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  margin-bottom: 30px;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.video-grid iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+}
+
+.video-option h3 {
+  color: #ff9933;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  margin-bottom: 10px;
 }
 
 .video-card {
@@ -457,10 +482,11 @@ body {
 }
 
 .video-card h3 {
-  color: #ff8c42;
+  color: #ff9933;
   font-size: 20px;
   margin-bottom: 15px;
   text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
 
 .question-section {
@@ -847,6 +873,31 @@ body {
   font-style: italic;
   margin-top: 10px;
   text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+/* === TEXT READABILITY IMPROVEMENTS === */
+h1, h2, h3 {
+  color: #ff9933;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9),
+               -1px -1px 2px rgba(0, 0, 0, 0.9),
+               1px -1px 2px rgba(0, 0, 0, 0.9),
+               -1px 1px 2px rgba(0, 0, 0, 0.9);
+}
+
+.welcome-description {
+  color: #ff9933;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+/* Для камер в справочнике */
+.camera-card h2 {
+  color: #ff9933;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+.camera-card p {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 .container {
@@ -1002,6 +1053,68 @@ body {
   line-height: 1.6;
 }
 
+/* === HERO ACTIONS BUTTONS === */
+.hero-actions {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.cta-button.large {
+  font-size: 1.3rem;
+  padding: 20px 50px;
+}
+
+.cta-button-secondary {
+  background: transparent;
+  color: #ff9933;
+  border: 2px solid #ff9933;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.cta-button-secondary:hover {
+  background: #ff9933;
+  color: #000;
+  text-shadow: none;
+}
+
+/* === PIXIE HINTS === */
+.pixie-hint {
+  background: linear-gradient(135deg, rgba(255, 153, 51, 0.2), rgba(255, 153, 51, 0.1));
+  border: 2px solid #ff9933;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 30px auto;
+  max-width: 800px;
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  box-shadow: 0 4px 15px rgba(255, 153, 51, 0.3);
+}
+
+.pixie-avatar {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.pixie-message {
+  flex: 1;
+  line-height: 1.6;
+}
+
+.pixie-message strong {
+  color: #ff9933;
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
 /* === МОБИЛЬНАЯ ВЕРСИЯ === */
 @media (max-width: 768px) {
   .hero-title {
@@ -1032,6 +1145,11 @@ body {
 
   .video-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
   }
 
   .answers {
