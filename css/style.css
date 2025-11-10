@@ -22,11 +22,11 @@ body {
 
 /* === НАВИГАЦИЯ === */
 .navbar {
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.95);
   padding: 15px 0;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
   border-bottom: 2px solid #ff9933;
 }
 
@@ -40,7 +40,7 @@ body {
 }
 
 .nav-logo {
-  color: #ff9933;
+  color: #ff9933 !important;
   font-size: 1.8rem;
   font-weight: bold;
   text-decoration: none;
@@ -56,7 +56,7 @@ body {
 }
 
 .nav-menu a {
-  color: #ffffff;
+  color: #ffffff !important;
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.3s;
@@ -64,7 +64,7 @@ body {
 }
 
 .nav-menu a:hover {
-  color: #ff9933;
+  color: #ff9933 !important;
 }
 
 /* === HERO СЕКЦИЯ === */
@@ -1626,4 +1626,112 @@ h1, h2, h3 {
   color: #ffffff;
   font-style: italic;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* === УЛУЧШЕНИЕ ЧИТАЕМОСТИ ТЕКСТА В ЭПИЗОДАХ === */
+
+/* Все заголовки */
+h1, h2, h3, h4 {
+  color: #ff9933 !important;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9),
+               -1px -1px 2px rgba(0, 0, 0, 0.9);
+}
+
+/* Весь текст на странице */
+body {
+  color: #ffffff;
+}
+
+p, span, div {
+  color: #ffffff !important;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
+}
+
+/* Подсказка Пикси */
+.pixie-hint {
+  background: linear-gradient(135deg, rgba(255, 153, 51, 0.3), rgba(255, 153, 51, 0.2));
+  border: 2px solid #ff9933;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 30px auto;
+  max-width: 900px;
+}
+
+.pixie-hint strong {
+  color: #ff9933 !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+/* История */
+.story-section h2 {
+  color: #ff9933 !important;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+}
+
+.story-section p {
+  color: #ffffff !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  line-height: 1.8;
+}
+
+/* Кнопки */
+.cta-button, .btn-start, button {
+  background: #ff9933;
+  color: #000000 !important;
+  text-shadow: none;
+  font-weight: bold;
+}
+
+.cta-button:hover, .btn-start:hover, button:hover {
+  background: #ff7700;
+  color: #000000 !important;
+}
+
+/* Секция с видео */
+.video-section h2,
+.episode-section h1 {
+  color: #ff9933 !important;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+}
+
+/* Вопросы */
+.question-section h2 {
+  color: #ff9933 !important;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+}
+
+.question-text {
+  color: #ffffff !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+/* Варианты ответов */
+.answer-button {
+  color: #ffffff !important;
+  background: transparent;
+  border: 2px solid #ff9933;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.answer-button:hover {
+  background: #ff9933;
+  color: #000000 !important;
+  text-shadow: none;
+}
+
+/* Эпизод заголовок и подзаголовок */
+.episode-header h1 {
+  color: #ff9933 !important;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+}
+
+.episode-subtitle {
+  color: #ffffff !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+/* Видео карточки */
+.video-card h3 {
+  color: #ff9933 !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
